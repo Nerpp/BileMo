@@ -20,6 +20,7 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
 
+        
         $listProduct = [
             [
                 'name' =>'Iphone 11',
