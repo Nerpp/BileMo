@@ -1,0 +1,11 @@
+{
+    "name": "regia/bile-mo",
+    "description": "Openclassroom project, API",
+    "authors": [
+        {
+            "name": "Nerpp",
+            "email": "regiaurelien@gmail.com"
+        }
+    ],
+    "require": {}
+}
