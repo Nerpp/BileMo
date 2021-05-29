@@ -7,5 +7,7 @@
             "email": "regiaurelien@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "lexik/jwt-authentication-bundle": "^2.11"
+    }
 }
