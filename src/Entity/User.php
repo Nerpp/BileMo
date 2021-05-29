@@ -2,14 +2,16 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\UserRepository;
+use Doctrine\Common\Collections\Collection;
+use ApiPlatform\Core\Annotation\ApiResource;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @ApiResource
  */
 class User implements UserInterface
 {
@@ -46,10 +48,6 @@ class User implements UserInterface
      */
     private $create_time;
 
-    /**
-     * @ORM\Column(type="blob")
-     */
-    private $token;
 
    
     /**
@@ -95,7 +93,7 @@ class User implements UserInterface
         return (string) $this->email;
     }
 
-    
+
     /**
      * @see UserInterface
      */
@@ -169,17 +167,7 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getToken()
-    {
-        return $this->token;
-    }
-
-    public function setToken($token): self
-    {
-        $this->token = $token;
-
-        return $this;
-    }
+   
 
    
 
