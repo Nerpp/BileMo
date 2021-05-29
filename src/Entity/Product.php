@@ -2,11 +2,14 @@
 
 namespace App\Entity;
 
-use App\Repository\ProductRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProductRepository;
+use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=ProductRepository::class)
+ * @ApiResource
  */
 class Product
 {
@@ -14,46 +17,55 @@ class Product
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * 
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * 
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * 
      */
     private $brand;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * 
      */
     private $battery;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * 
      */
     private $ram;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * 
      */
     private $generation;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * 
      */
     private $system;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * 
      */
     private $intern_memory;
 
     /**
      * @ORM\Column(type="datetime")
+     * 
      */
     private $date_add;
 

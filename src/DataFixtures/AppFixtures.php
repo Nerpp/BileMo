@@ -20,7 +20,7 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
 
-        
+
         $listProduct = [
             [
                 'name' =>'Iphone 11',
@@ -115,14 +115,11 @@ class AppFixtures extends Fixture
 
         $user->setEmail('jean.fourcheraude@gmail.com');
         $user->setPassword($this->encoder->encodePassword($user, "123456"));
-        $user->setUsername('Fourcheraude');
-        $user->setToken(bin2hex(openssl_random_pseudo_bytes(256)));
+        $user->setUsername('Fourcheraude');   
         $user->setCreateTime(new \DateTime('+2 days'));
         $manager->persist($user);
         $allUser[] = $user;
         $manager->flush();
-
-      
 
         foreach($listProduct as $productListed)
         {
